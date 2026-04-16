@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <img src="https://mospolytech.ru/local/templates/main/dist/img/logos/mospolytech-logo-white.svg" alt="Логотип МосПолитех">
+        <h1>Feedback form</h1>
+        <div class="header-spacer"></div>
+    </header>
+
+    <main>
+        <h2>Форма обратной связи</h2>
+        <form action="https://httpbin.org/post" method="POST">
+            
+            <div>
+                <label for="username">Имя пользователя:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+
+            <div>
+                <label for="email">E-mail пользователя:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div>
+                <label for="type">Тип обращения:</label>
+                <select id="type" name="appeal_type">
+                    <option value="жалоба">Жалоба</option>
+                    <option value="предложение">Предложение</option>
+                    <option value="благодарность">Благодарность</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="message">Текст обращения:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+
+            <div>
+                <label>Вариант ответа:</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="reply_sms" name="reply_method[]" value="sms">
+                    <label for="reply_sms">СМС</label>
+                    
+                    <input type="checkbox" id="reply_email" name="reply_method[]" value="email">
+                    <label for="reply_email">E-mail</label>
+                </div>
+            </div>
+
+            <button type="submit">Отправить</button>
+        </form>
+        
+        <br>
+        <a href="page2.php" class="btn">Перейти на страницу 2</a>
+    </main>
+
+    <footer>
+        Задание для самостоятельной работы
+    </footer>
+
+</body>
+</html>
